@@ -35,6 +35,7 @@ jobs:
       run: |
         # Run the headless test runner
         # Capture output. If successful, it prints the time.
+        export PYGAME_HIDE_SUPPORT_PROMPT=1
         SCORE=$(python main.py --test)
         EXIT_CODE=$?
         
